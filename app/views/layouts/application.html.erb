@@ -8,7 +8,18 @@
 </head>
 <body>
 
+<div id="header">
+	<%= link_to "Home", root_path %>
+	<%= link_to "Home", about_path %>
+	
+	<h1>Pixolio</h1>
+</div>
+
 <%= yield %>
+
+<div id="footer">
+	<p>Copyright &copy;2013, Ronak Prajapati</p>
+</div>
 
 </body>
 </html>
