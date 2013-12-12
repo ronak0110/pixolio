@@ -7,18 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="container">
+  
 <div id="header">
 	<%= link_to "Home", root_path %>
 	<%= link_to "Home", about_path %>
 	
 	<h1>Pixolio</h1>
+
+</div>
+</div>
+<%= render "layouts/menu" %>
+<div class="container">
+
+<div class="alerts">
+	<% flash.each do |name, msg| %>
+		<%= content_tag :div, msg, :class => "alert alert-#{name}" %>
+	<% end %>
 </div>
 
 <%= yield %>
 
 <div id="footer">
 	<p>Copyright &copy;2013, Ronak Prajapati</p>
+</div>
+
 </div>
 
 </body>
